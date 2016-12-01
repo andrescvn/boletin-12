@@ -5,42 +5,26 @@
  */
 package boletin.pkg12;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author acomesanavila
  */
 public class Garaxe {
-   private int numeroCoches;
-   private String matricula;
 
+    private static int numeroCoches;
+    public Garaxe() {
+    }
+    public Garaxe(int numeroCoches) {
+        this.numeroCoches = numeroCoches;
+
+    }
     public int getNumeroCoches() {
         return numeroCoches;
     }
 
     public void setNumeroCoches(int numeroCoches) {
         this.numeroCoches = numeroCoches;
-    }
-
-    public String getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public Garaxe(int numeroCoches, String matricula) {
-        this.numeroCoches = numeroCoches;
-        this.matricula = matricula;
-    }
-   
-   public void numeroPlazas(){
-    if (numeroCoches<5)    
-            System.out.println("PLAZAS DISPOÑIBLES");
-    else
-            System.out.println("COMPLETO");
-    }
-    public void factura (){
-        
     }
 }
