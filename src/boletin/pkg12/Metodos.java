@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Metodos {
 
     public double precio(float Horas) {
-        double coste,horasExtra = 0;
+        double horasExtra = 0;
         if (Horas > 3) 
             horasExtra = Horas - 3;
         return (1.5 + horasExtra * 0.20);
