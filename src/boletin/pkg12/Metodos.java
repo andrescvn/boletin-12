@@ -27,7 +27,7 @@ public class Metodos {
     }
 
     public void factura(float Horas, double coste, double pago, double devolucion, String matricula) {
-        System.out.println("factura: \n Matricula coche: " + matricula + "\n Tempo: " + Horas + " h" + "\n Precio: " + coste + " €" + "\n Cartos recibidos: " + pago + " €" + " \n Cartos devoltos: " + devolucion + " €");
+        System.out.println("FACTURA: \n Matricula coche: " + matricula + "\n Tempo: " + Horas + " h" + "\n Precio: " + coste + " €" + "\n Cartos recibidos: " + pago + " €" + " \n Cartos devoltos: " + devolucion + " €");
     }
 
     public float pedirDato() {
