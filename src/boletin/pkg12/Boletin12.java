@@ -20,21 +20,33 @@ public class Boletin12 {
         // TODO code application logic here
         Garaxe garaxe = new Garaxe();
         Metodos metodo=new Metodos();
-        Coche car= new Coche ();
- 
-        double numeroCoches = Double.parseDouble(JOptionPane.showInputDialog("numero de coches no garaxe"));
-        if (numeroCoches < 5) {
+        
+        String matricula;
+        double pago,coste,devolucion;
+        float numHoras;
+        
+        do{
             System.out.println("PLAZAS DISPOÑIBLES");
-            car.setMatricula(JOptionPane.showInputDialog("Matricula"));
-            String matricula=car.getMatricula();
-            int numHoras = Integer.parseInt(JOptionPane.showInputDialog("Numero de horas"));
-            double coste= metodo.precio(numHoras);
-            double  pago= Float.parseFloat(JOptionPane.showInputDialog("Pago"));
-            double devolucion=metodo.devolucion(coste,pago);
+            
+            Coche car= new Coche ();
+            matricula=car.pedirMatricula();
+            
+            numHoras =metodo.pedirDato();
+            while(numHoras<=0)
+            numHoras =metodo.pedirDato();
+            
+            coste= metodo.precio(numHoras);
+            
+            pago= metodo.pedirDato();
+            while (pago<=1)
+            pago=metodo.pedirDato();
+            
+            devolucion=metodo.devolucion(coste,pago);
+            
             metodo.factura(numHoras, coste, pago, devolucion, matricula);
-        } else {
+        }
+        while (Garaxe.numeroCoches<5);    
             System.out.println("COMPLETO");
         }
 
     }
-}

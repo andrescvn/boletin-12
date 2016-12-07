@@ -13,13 +13,16 @@ import javax.swing.JOptionPane;
  */
 public class Garaxe {
 
-    private static int numeroCoches;
+    public static int numeroCoches;
+
     public Garaxe() {
     }
+
     public Garaxe(int numeroCoches) {
         this.numeroCoches = numeroCoches;
 
     }
+
     public int getNumeroCoches() {
         return numeroCoches;
     }

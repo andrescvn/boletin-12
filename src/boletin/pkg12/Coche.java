@@ -5,14 +5,18 @@
  */
 package boletin.pkg12;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author acomesanavila
  */
 public class Coche extends Garaxe {
-        private String matricula;
+
+    private String matricula;
 
     public Coche() {
+        numeroCoches++;
     }
 
     public Coche(String matricula) {
@@ -22,9 +26,13 @@ public class Coche extends Garaxe {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
-        
-            public String getMatricula() {
+
+    public String getMatricula() {
         return matricula;
+    }
+
+    public String pedirMatricula() {
+        return JOptionPane.showInputDialog("Matricula");
     }
 
 }
