@@ -15,11 +15,9 @@ public class Metodos {
 
     public double precio(float Horas) {
         double coste,horasExtra = 0;
-        if (Horas > 3) {
+        if (Horas > 3) 
             horasExtra = Horas - 3;
-        }
-         coste = 1.5 + horasExtra * 0.20;
-        return coste;
+        return (1.5 + horasExtra * 0.20);
     }
 
     public double devolucion(double coste, double pago) {
