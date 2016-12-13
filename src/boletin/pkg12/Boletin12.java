@@ -32,7 +32,7 @@ public class Boletin12 {
             matricula=car.pedirMatricula();
             
             numHoras =metodo.pedirDato();
-            while(numHoras<=0)
+            while(numHoras<0)
             numHoras =metodo.pedirDato();
             
             coste= metodo.precio(numHoras);
